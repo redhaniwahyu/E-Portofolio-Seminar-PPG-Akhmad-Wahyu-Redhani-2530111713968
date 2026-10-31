@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Portofolio Seminar PPG — Akhmad Wahyu Redhani (2530111713968)</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="min-h-screen flex flex-col">
+  
+  <!-- Top Navigation Bar (Sistem Klik Menu + Dark/Light Mode) -->
+  <header class="nav-glass sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white font-extrabold flex items-center justify-center shadow-md">
+          AW
+        </div>
+        <div>
+          <div class="font-extrabold text-sm sm:text-base leading-tight">Akhmad Wahyu Redhani</div>
+          <div class="text-[11px] opacity-75 font-medium">E-Portofolio PPG Informatika • ULM</div>
+        </div>
+      </div>
+
+      <!-- Menu Halaman (Desktop) -->
+      <nav class="hidden xl:flex items-center gap-1" aria-label="Menu Utama">
+        <a href="index.html" class="nav-link-item  px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition">🏠 1. Home & Visi</a><a href="semester-1.html" class="nav-link-item active px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition">📘 2. Refleksi Semester 1</a><a href="semester-2.html" class="nav-link-item  px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition">📗 3. Refleksi Semester 2</a><a href="pengalaman-ppg.html" class="nav-link-item  px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition">🎓 4. Refleksi Pengalaman PPG</a><a href="karya-inovasi.html" class="nav-link-item  px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition">🚀 5. Desain Karya Inovasi</a>
+      </nav>
+
+      <!-- Dark / Light Mode Toggle & Mobile Menu Button -->
+      <div class="flex items-center gap-2">
+        <button type="button" id="theme-toggle-btn" onclick="toggleTheme()" class="px-3.5 py-2 rounded-xl surface-subtle hover:border-blue-500 text-xs font-bold transition flex items-center gap-1.5 shadow-sm" aria-label="Toggle Dark Light Mode">
+          <span id="theme-icon">🌙</span>
+          <span id="theme-text" class="hidden sm:inline">Dark Mode</span>
+        </button>
+        <button type="button" onclick="toggleMobileMenu()" class="xl:hidden p-2 rounded-xl surface-subtle font-bold text-sm" aria-label="Buka Menu Navigasi">
+          ☰ Menu
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav-menu" class="hidden xl:hidden px-4 pb-4 pt-2 border-t border-slate-200 dark:border-slate-800 space-y-1">
+      <a href="index.html" class="nav-link-item  block px-4 py-2.5 rounded-xl text-sm font-semibold transition">🏠 1. Home & Visi</a><a href="semester-1.html" class="nav-link-item active block px-4 py-2.5 rounded-xl text-sm font-semibold transition">📘 2. Refleksi Semester 1</a><a href="semester-2.html" class="nav-link-item  block px-4 py-2.5 rounded-xl text-sm font-semibold transition">📗 3. Refleksi Semester 2</a><a href="pengalaman-ppg.html" class="nav-link-item  block px-4 py-2.5 rounded-xl text-sm font-semibold transition">🎓 4. Refleksi Pengalaman PPG</a><a href="karya-inovasi.html" class="nav-link-item  block px-4 py-2.5 rounded-xl text-sm font-semibold transition">🚀 5. Desain Karya Inovasi</a>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    
+    <!-- HALAMAN 2: REFLEKSI PERKULIAHAN SEMESTER 1 (LK 2) -->
+    <div class="space-y-8">
+      <!-- Header Banner Semester -->
+      <div class="surface-card rounded-3xl overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+          <div class="lg:col-span-8 p-6 sm:p-9 space-y-3">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wider">
+              <span>Lembar Kerja 2 (LK 2) • Refleksi Model 4C &amp; Analisis Artefak</span>
+            </div>
+            <h1 class="text-2xl sm:text-4xl font-extrabold">Refleksi Perkuliahan Semester 1</h1>
+            <p class="text-sm sm:text-base opacity-85 leading-relaxed">6 Mata Kuliah Inti Semester 1: Fondasi Filosofi KHD, Pemahaman Peserta Didik, Pembelajaran Mendalam (UbD), Sosiokultural, Growth Mindset, & PPL Terbimbing di SMKN 1 Banjarmasin.</p>
+            <div class="flex flex-wrap gap-2 pt-2 text-xs font-semibold">
+              <span class="px-3 py-1.5 rounded-lg surface-subtle">1. Connection (Keterkaitan Peran)</span>
+              <span class="px-3 py-1.5 rounded-lg surface-subtle">2. Challenge (Tantangan Praktik)</span>
+              <span class="px-3 py-1.5 rounded-lg surface-subtle">3. Concept (Konsep Utama)</span>
+              <span class="px-3 py-1.5 rounded-lg surface-subtle">4. Change (Perubahan Nyata)</span>
+              <span class="px-3 py-1.5 rounded-lg surface-subtle">5. Analisis Artefak Bukti Dukung</span>
+            </div>
+          </div>
+          <div class="lg:col-span-4 h-56 lg:h-full">
+            <img src="assets/img/lab_ppl.jpg" alt="Refleksi Perkuliahan Semester 1" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid 6 Mata Kuliah & LK -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <div class="surface-card rounded-2xl p-6 flex flex-col justify-between space-y-5">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-bold">
+                Semester 1 • Fondasi Pedagogik
+              </span>
+              <span class="text-xs font-mono font-bold opacity-60">MK-01</span>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-extrabold leading-snug">Filosofi Pendidikan dan Pendidikan Nilai</h3>
+              <p class="text-sm opacity-85 mt-2 leading-relaxed">Rekonstruksi paradigma pengajaran Informatika dari sekadar instruksi teknis mekanis menuju pendidikan humanis yang menuntun kodrat alam &amp; kodrat zaman murid sesuai Sistem Among Ki Hadjar Dewantara.</p>
+            </div>
+
+            <!-- Kotak Nama File LK Asli (PDF Only) -->
+            <div class="p-3 rounded-xl surface-subtle space-y-1">
+              <div class="text-[11px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">Nama File LK (Format PDF):</div>
+              <div class="lk-filename-box font-semibold">LK Refleksi Semester 1 Filosofi Pendidikan dan Pendidikan Nilai  _ A. Wahyu Redhani _ 2530111713968.pdf</div>
+            </div>
+
+            <!-- Sorotan Konsep Utama -->
+            <div class="space-y-1.5">
+              <div class="text-xs font-bold uppercase tracking-wider opacity-75">Konsep Kunci &amp; Praktik Baik:</div>
+              <ul class="space-y-1">
+                <li class="flex items-start gap-2 text-xs"><span class="text-blue-500 font-bold">✓</span><span>Sistem Among KHD (Ing Ngarso Sung Tulodo, Ing Madyo Mangun Karso, Tut Wuri Handayani)</span></li><li class="flex items-start gap-2 text-xs"><span class="text-blue-500 font-bold">✓</span><span>Kodrat Alam Budaya Banjar &amp; Kodrat Zaman Era AI</span></li><li class="flex items-start gap-2 text-xs"><span class="text-blue-500 font-bold">✓</span><span>Transfer of Values &amp; Keteladanan Etika Digital di Lab Komputer</span></li>
+              </ul>
+            </div>
+
+            <!-- Cuplikan Refleksi 4C -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <div class="p-3 rounded-xl surface-subtle text-xs space-y-1">
+                <div class="font-bold text-blue-600 dark:text-blue-400">🔗 Connection (Keterkaitan)</div>
+                <p class="opacity-80 leading-relaxed">Mata kuliah ini memberikan fondasi filosofis yang sangat mendasar bagi peran saya sebagai calon guru Informatika di SMKN 1 Banjarmasin. Sebelum mendalami materi ini, saya cenderung memandang pengajaran Informatika secara...</p>
+              </div>
+              <div class="p-3 rounded-xl surface-subtle text-xs space-y-1">
+                <div class="font-bold text-emerald-600 dark:text-emerald-400">🚀 Change (Perubahan Nyata)</div>
+                <p class="opacity-80 leading-relaxed">Perubahan nyata yang saya terapkan dalam praktik mengajar di kelas X-B DKV dan X-C DKV adalah:
+• Pergeseran Paradigma Mengajar: Mentransformasi pendekatan dari transfer of knowledge teknis semata menuju transfer of value...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tombol Aksi View & Download LK (Tanpa DOCX - Khusus PDF) -->
+          <div class="pt-4 border-t border-slate-200 dark:border-slate-700/60 flex flex-wrap items-center justify-between gap-2">
+            <button type="button" onclick="openLkModal('sem1-filosofi')" class="flex-1 min-w-[140px] px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow">
+              <span>👁️ View Isi Lengkap LK</span>
+            </button>
+            <a href="lk/LK Refleksi Semester 1 Filosofi Pendidikan dan Pendidikan Nilai  _ A. Wahyu Redhani _ 2530111713968.pdf" download="LK Refleksi Semester 1 Filosofi Pendidikan dan Pendidikan Nilai  _ A. Wahyu Redhani _ 2530111713968.pdf" onclick="handleDownloadLk(event, 'LK Refleksi Semester 1 Filosofi Pendidikan dan Pendidikan Nilai  _ A. Wahyu Redhani _ 2530111713968.pdf', 'sem1-filosofi')" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow" title="Download File PDF">
+              <span>⬇️ Download PDF</span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="surface-card rounded-2xl p-6 flex flex-col justify-between space-y-5">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-bold">
+                Semester 1 • Psikologi &amp; Diferensiasi
+              </span>
+              <span class="text-xs font-mono font-bold opacity-60">MK-02</span>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-extrabold leading-snug">Pemahaman tentang Peserta Didik dan Pembelajaran</h3>
+              <p class="text-sm opacity-85 mt-2 leading-relaxed">Pemetaan kesiapan belajar (Learner Profiling) 35 murid kelas X-B DKV SMKN 1 Banjarmasin ke dalam kategori Perintis, Cakap, dan Mahir melalui penugasan praktikum bertingkat (Tiered Assignment).</p>
+            </div>
+
+            <!-- Kotak Nama File LK Asli (PDF Only) -->
+            <div class="p-3 rounded-xl surface-subtle space-y-1">
+              <div class="text-[11px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">Nama File LK (Format PDF):</div>
+              <div class="lk-filename-box font-semibold">LK Refleksi Semester 1 Pemahaman tentang Peserta Didik dan Pembelajaran _ A. Wahyu Redhani _ 2530111713968.pdf</div>
+            </div>
+
+            <!-- Sorotan Konsep Utama -->
+            <div class="space-y-1.5">
+              <div class="text-xs font-bold uppercase tracking-wider opacity-75">Konsep Kunci &amp; Praktik Baik:</div>
+              <ul class="space-y-1">
+                <li class="flex items-start gap-2 text-xs"><span class="text-blue-500 font-bold">✓</span><span>ZPD &amp; Scaffolding (Piaget &amp; Vygotsky)</span></li><li class="flex items-start gap-2 text-xs"><span class="text-blue-500 font-bold">✓</span><span>Psikososial Remaja SMK (Erik Erikson)</span></li><li class="flex items-start gap-2 text-xs"><span class="text-blue-500 font-bold">✓</span><span>Diferensiasi Konten, Proses, dan Produk Visual DKV</span></li>
+              </ul>
+            </div>
+
+            <!-- Cuplikan Refleksi 4C -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <div class="p-3 rounded-xl surface-subtle text-xs space-y-1">
+                <div class="font-bold text-blue-600 dark:text-blue-400">🔗 Connection (Keterkaitan)</div>
+                <p class="opacity-80 leading-relaxed">Mata kuliah ini memiliki relevansi langsung dengan realitas yang saya hadapi sehari-hari saat mengajar kelas X-B DKV dan X-C DKV di SMKN 1 Banjarmasin. Di dalam kelas kejuruan, murid datang dengan latar belakang kognitif...</p>
+              </div>
+              <div class="p-3 rounded-xl surface-subtle text-xs space-y-1">
+                <div class="font-bold text-emerald-600 dark:text-emerald-400">🚀 Change (Perubahan Nyata)</div>
+                <p class="opacity-80 leading-relaxed">Langkah perbaikan konkret yang saya wujudkan di kelas X-B DKV dan X-C DKV meliputi:
+• Melakukan Pemetaan Kesiapan Belajar Rutin: Melaksanakan asesmen awal sebelum topik pengolahan data dimulai, memetakan 35 murid kelas X...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tombol Aksi View & Download LK (Tanpa DOCX - Khusus PDF) -->
+          <div class="pt-4 border-t border-slate-200 dark:border-slate-700/60 flex flex-wrap items-center justify-between gap-2">
+            <button type="button" onclick="openLkModal('sem1-ppdp')" class="flex-1 min-w-[140px] px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow">
+              <span>👁️ View Isi Lengkap LK</span>
+            </button>
+            <a href="lk/LK Refleksi Semester 1 Pemahaman tentang Peserta Didik dan Pembelajaran _ A. Wahyu Redhani _ 2530111713968.pdf" download="LK Refleksi Semester 1 Pemahaman tentang Peserta Didik dan Pembelajaran _ A. Wahyu Redhani _ 2530111713968.pdf" onclick="handleDownloadLk(event, 'LK Refleksi Semester 1 Pemahaman tentang Peserta Didik dan Pembelajaran _ A. Wahyu Redhani _ 2530111713968.pdf', 'sem1-ppdp')" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow" title="Download File PDF">
+              <span>⬇️ Download PDF</span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="surface-card rounded-2xl p-6 flex flex-col justify-between space-y-5">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-bold">
+                Semester 1 • UbD &amp; Deep Learning
+              </span>
+              <span class="text-xs font-mono font-bold opacity-60">MK-03</span>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-extrabold leading-snug">Pembelajaran Mendalam dan Asesmen Dasar</h3>
+              <p class="text-sm opacity-85 mt-2 leading-relaxed">Transformasi dari surface learning menuju Deep Learning (Berkesadaran, Bermakna, Menggembirakan) menggunakan alur mundur Understanding by Design (UbD) dan Tripartit Asesmen.</p>
+            </div>
+
+            <!-- Kotak Nama File LK Asli (PDF Only) -->
+            <div class="p-3 rounded-xl surface-subtle space-y-1">
+              <div class="text-[11px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">Nama File LK (Format PDF):</div>
+              <div class="lk-filename-box font-semibold">LK Refleksi Semester 1 Pembelajaran Mendalam dan Asesmen Dasar _ A. Wahyu Redhani _ 2530111713968.pdf</div>
+            </div>
+
+            <!-- Sorotan Konsep Utama -->
+            <div class="space-y-1.5">
+              <div class="text-xs font-bold uppercase tracking-wider opacity-75">Konsep Kunci &amp; Praktik Baik:</div>
+              <ul class="space-y-1">
+                <li class="flex items-start gap-2 text-xs"><span class="text-blue-500 font-bold">✓</span><span>Prinsip 3B: Mindful, Meaningful, Joyful Learning</span></li><li class="flex items-start gap-2 text-xs"><span class="text-blue-500 font-bold">✓</span><span>Backward Design (Understanding by Design / UbD)</span></li><li class="flex items-start gap-2 text-xs"><span class="text-blue-500 font-bold">✓</span><span>Dataset Nyata Elevasi Air Waduk Riam Kanan &amp; Exit Ticket</span></li>
+              </ul>
+            </div>
+
+            <!-- Cuplikan Refleksi 4C -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <div class="p-3 rounded-xl surface-subtle text-xs space-y-1">
+                <div class="font-bold text-blue-600 dark:text-blue-400">🔗 Connection (Keterkaitan)</div>
+                <p class="opacity-80 leading-relaxed">Mata kuliah ini merevolusi pemahaman saya mengenai hakikat pembelajaran dan penilaian dalam bidang Informatika. Selama ini, pelajaran TIK kerap terjebak dalam surface learning (belajar di permukaan), di mana murid hanya ...</p>
+              </div>
+              <div class="p-3 rounded-xl surface-subtle text-xs space-y-1">
+                <div class="font-bold text-emerald-600 dark:text-emerald-400">🚀 Change (Perubahan Nyata)</div>
+                <p class="opacity-80 leading-relaxed">Perubahan nyata yang saya terapkan pada pembelajaran TIK kelas X-B DKV dan X-C DKV di SMKN 1 Banjarmasin adalah:
+• Menerapkan Backward Design secara Disiplin: Merumuskan modul ajar dengan diawali Pertanyaan Esensial (mis...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tombol Aksi View & Download LK (Tanpa DOCX - Khusus PDF) -->
+          <div class="pt-4 border-t border-slate-200 dark:border-slate-700/60 flex flex-wrap items-center justify-between gap-2">
+            <button type="button" onclick="openLkModal('sem1-pma-dasar')" class="flex-1 min-w-[140px] px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow">
+              <span>👁️ View Isi Lengkap LK</span>
+            </button>
+            <a href="lk/LK Refleksi Semester 1 Pembelajaran Mendalam dan Asesmen Dasar _ A. Wahyu Redhani _ 2530111713968.pdf" download="LK Refleksi Semester 1 Pembelajaran Mendalam dan Asesmen Dasar _ A. Wahyu Redhani _ 2530111713968.pdf" onclick="handleDownloadLk(event, 'LK Refleksi Semester 1 Pembelajaran Mendalam dan Asesmen Dasar _ A. Wahyu Redhani _ 2530111713968.pdf', 'sem1-pma-dasar')" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow" title="Download File PDF">
+              <span>⬇️ Download PDF</span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="surface-card rounded-2xl p-6 flex flex-col justify-between space-y-5">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-bold">
+                Semester 1 • Kesetaraan &amp; CRT
+              </span>
+              <span class="text-xs font-mono font-bold opacity-60">MK-04</span>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-extrabold leading-snug">Perspektif Sosiokultural dalam Pendidikan Indonesia</h3>
+              <p class="text-sm opacity-85 mt-2 leading-relaxed">Menjembatani kesenjangan akses perangkat digital di rumah dengan mengoptimalkan laboratorium sekolah sebagai ruang kesetaraan, tutor sebaya heterogen, dan Culturally Responsive Teaching.</p>
+            </div>
+
+            <!-- Kotak Nama File LK Asli (PDF Only) -->
+            <div class="p-3 rounded-xl surface-subtle space-y-1">
+              <div class="text-[11px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">Nama File LK (Format PDF):</div>
+              <div class="lk-filename-box font-semibold">LK Refleksi Semester 1 Perspektif Sosiokultural dalam Pendidikan Indonesia _ A. Wahyu Redhani _ 2530111713968.pdf</div>
+            </div>
+
+            <!-- Sorotan Konsep Utama -->
+            <div class="space-y-1.5">
+              <div class="text-xs font-bold uppercase tracking-wider opacity-75">Konsep Kunci &amp; Praktik Baik:</div>
+              <ul class="space-y-1">
+                <li class="flex items-start gap-2 text-xs"><span class="text-blue-500 font-bold">✓</span><span>Ekologi Belajar (Bronfenbrenner) &amp; Modal Kultural (Bourdieu)</span></li><li class="flex items-start gap-2 text-xs"><span class="text-blue-500 font-bold">✓</span><span>Penghapusan PR Berbasis PC bagi Murid Tanpa Laptop</span></li><li class="flex items-start gap-2 text-xs"><span class="text-blue-500 font-bold">✓</span><span>Integrasi Konteks Sungai &amp; Pasar Terapung Banjar (CRT)</span></li>
+              </ul>
+            </div>
+
+            <!-- Cuplikan Refleksi 4C -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <div class="p-3 rounded-xl surface-subtle text-xs space-y-1">
+                <div class="font-bold text-blue-600 dark:text-blue-400">🔗 Connection (Keterkaitan)</div>
+                <p class="opacity-80 leading-relaxed">Mata kuliah ini memperluas wawasan saya bahwa ruang kelas di sekolah tidak pernah berdiri di ruang hampa yang terisolasi dari lingkungan sosialnya. Pendidikan selalu terikat erat dengan latar belakang ekonomi keluarga, m...</p>
+              </div>
+              <div class="p-3 rounded-xl surface-subtle text-xs space-y-1">
+                <div class="font-bold text-emerald-600 dark:text-emerald-400">🚀 Change (Perubahan Nyata)</div>
+                <p class="opacity-80 leading-relaxed">Aksi nyata yang saya terapkan di lingkungan SMKN 1 Banjarmasin adalah:
+• Mengoptimalkan Laboratorium Sekolah sebagai Ruang Kesetaraan: Menjamin seluruh penugasan praktikum berbasis perangkat lunak diselesaikan tuntas di ...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tombol Aksi View & Download LK (Tanpa DOCX - Khusus PDF) -->
+          <div class="pt-4 border-t border-slate-200 dark:border-slate-700/60 flex flex-wrap items-center justify-between gap-2">
+            <button type="button" onclick="openLkModal('sem1-sosiokultural')" class="flex-1 min-w-[140px] px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow">
+              <span>👁️ View Isi Lengkap LK</span>
+            </button>
+            <a href="lk/LK Refleksi Semester 1 Perspektif Sosiokultural dalam Pendidikan Indonesia _ A. Wahyu Redhani _ 2530111713968.pdf" download="LK Refleksi Semester 1 Perspektif Sosiokultural dalam Pendidikan Indonesia _ A. Wahyu Redhani _ 2530111713968.pdf" onclick="handleDownloadLk(event, 'LK Refleksi Semester 1 Perspektif Sosiokultural dalam Pendidikan Indonesia _ A. Wahyu Redhani _ 2530111713968.pdf', 'sem1-sosiokultural')" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow" title="Download File PDF">
+              <span>⬇️ Download PDF</span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="surface-card rounded-2xl p-6 flex flex-col justify-between space-y-5">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-bold">
+                Semester 1 • Growth Mindset
+              </span>
+              <span class="text-xs font-mono font-bold opacity-60">MK-05</span>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-extrabold leading-snug">Pola Pikir Bertumbuh dalam Pembelajaran</h3>
+              <p class="text-sm opacity-85 mt-2 leading-relaxed">Membangun resiliensi mental murid kejuruan saat menghadapi error sintaks/formula (#VALUE!, #N/A) melalui apresiasi proses (Process Praise), The Power of Yet, dan zona aman berbuat salah.</p>
+            </div>
+
+            <!-- Kotak Nama File LK Asli (PDF Only) -->
+            <div class="p-3 rounded-xl surface-subtle space-y-1">
+              <div class="text-[11px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">Nama File LK (Format PDF):</div>
+              <div class="lk-filename-box font-semibold">LK Refleksi Semester 1 Pola Pikir Bertumbuh dalam Pembelajaran _ A. Wahyu Redhani _ 2530111713968.pdf</div>
+            </div>
+
+            <!-- Sorotan Konsep Utama -->
+            <div class="space-y-1.5">
+              <div class="text-xs font-bold uppercase tracking-wider opacity-75">Konsep Kunci &amp; Praktik Baik:</div>
+              <ul class="space-y-1">
+                <li class="flex items-start gap-2 text-xs"><span class="text-blue-500 font-bold">✓</span><span>Teori Growth Mindset (Carol Dweck) &amp; Neuroplastisitas</span></li><li class="flex items-start gap-2 text-xs"><span class="text-blue-500 font-bold">✓</span><span>Productive Failure &amp; Budaya &#x27;Merayakan Error&#x27; di Lab</span></li><li class="flex items-start gap-2 text-xs"><span class="text-blue-500 font-bold">✓</span><span>Reframing Respon Guru &amp; Kekuatan Kata &#x27;BELUM&#x27; (The Power of Yet)</span></li>
+              </ul>
+            </div>
+
+            <!-- Cuplikan Refleksi 4C -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <div class="p-3 rounded-xl surface-subtle text-xs space-y-1">
+                <div class="font-bold text-blue-600 dark:text-blue-400">🔗 Connection (Keterkaitan)</div>
+                <p class="opacity-80 leading-relaxed">Mata kuliah ini menyentuh aspek psikologis yang sangat krusial dalam pembelajaran Informatika di SMK. Belajar komputasi, logika pemrograman, dan pengolahan data identik dengan trial-and-error, pesan kesalahan (error warn...</p>
+              </div>
+              <div class="p-3 rounded-xl surface-subtle text-xs space-y-1">
+                <div class="font-bold text-emerald-600 dark:text-emerald-400">🚀 Change (Perubahan Nyata)</div>
+                <p class="opacity-80 leading-relaxed">Perubahan nyata yang saya budayakan di laboratorium komputer SMKN 1 Banjarmasin adalah:
+• Mengubah Pola Umpan Balik (Reframing Feedback): Memuji proses penalaran murid: &#x27;Saya bangga dengan ketekunanmu melacak sel yang sa...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tombol Aksi View & Download LK (Tanpa DOCX - Khusus PDF) -->
+          <div class="pt-4 border-t border-slate-200 dark:border-slate-700/60 flex flex-wrap items-center justify-between gap-2">
+            <button type="button" onclick="openLkModal('sem1-growth-mindset')" class="flex-1 min-w-[140px] px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow">
+              <span>👁️ View Isi Lengkap LK</span>
+            </button>
+            <a href="lk/LK Refleksi Semester 1 Pola Pikir Bertumbuh dalam Pembelajaran _ A. Wahyu Redhani _ 2530111713968.pdf" download="LK Refleksi Semester 1 Pola Pikir Bertumbuh dalam Pembelajaran _ A. Wahyu Redhani _ 2530111713968.pdf" onclick="handleDownloadLk(event, 'LK Refleksi Semester 1 Pola Pikir Bertumbuh dalam Pembelajaran _ A. Wahyu Redhani _ 2530111713968.pdf', 'sem1-growth-mindset')" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow" title="Download File PDF">
+              <span>⬇️ Download PDF</span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="surface-card rounded-2xl p-6 flex flex-col justify-between space-y-5">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-bold">
+                Semester 1 • Praktik Klinis Lab
+              </span>
+              <span class="text-xs font-mono font-bold opacity-60">MK-06</span>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-extrabold leading-snug">Praktik Pengalaman Lapangan (PPL) Terbimbing</h3>
+              <p class="text-sm opacity-85 mt-2 leading-relaxed">Penerapan siklus Lesson Study (Plan, Do, See), manajemen laboratorium komputer real-time (hands-off-mouse rules), serta skenario kontingensi unplugged saat menghadapi kendala teknis/listrik.</p>
+            </div>
+
+            <!-- Kotak Nama File LK Asli (PDF Only) -->
+            <div class="p-3 rounded-xl surface-subtle space-y-1">
+              <div class="text-[11px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">Nama File LK (Format PDF):</div>
+              <div class="lk-filename-box font-semibold">LK Refleksi Semester 1 Praktik Pengalaman Lapangan Terbimbing _ A. Wahyu Redhani _ 2530111713968.pdf</div>
+            </div>
+
+            <!-- Sorotan Konsep Utama -->
+            <div class="space-y-1.5">
+              <div class="text-xs font-bold uppercase tracking-wider opacity-75">Konsep Kunci &amp; Praktik Baik:</div>
+              <ul class="space-y-1">
+                <li class="flex items-start gap-2 text-xs"><span class="text-blue-500 font-bold">✓</span><span>Siklus Lesson Study (Plan, Do, See) bersama Guru Pamong &amp; DPL</span></li><li class="flex items-start gap-2 text-xs"><span class="text-blue-500 font-bold">✓</span><span>Manajemen Waktu 3 JP (120 Menit) &amp; Aturan Disiplin Layar</span></li><li class="flex items-start gap-2 text-xs"><span class="text-blue-500 font-bold">✓</span><span>Adaptive Instructional Contingency (Plan B Unplugged)</span></li>
+              </ul>
+            </div>
+
+            <!-- Cuplikan Refleksi 4C -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <div class="p-3 rounded-xl surface-subtle text-xs space-y-1">
+                <div class="font-bold text-blue-600 dark:text-blue-400">🔗 Connection (Keterkaitan)</div>
+                <p class="opacity-80 leading-relaxed">PPL Terbimbing di SMKN 1 Banjarmasin merupakan laboratorium nyata yang menyatukan seluruh mata kuliah teoritis, filosofi KHD, pemahaman peserta didik, dan kerangka Deep Learning, ke dalam panggung praktik mengajar sesung...</p>
+              </div>
+              <div class="p-3 rounded-xl surface-subtle text-xs space-y-1">
+                <div class="font-bold text-emerald-600 dark:text-emerald-400">🚀 Change (Perubahan Nyata)</div>
+                <p class="opacity-80 leading-relaxed">Transformasi diri yang saya alami setelah menjalani siklus PPL Terbimbing adalah:
+• Menjadi Calon Guru yang Taktis dan Adaptif: Tidak lagi mudah panik saat kendala teknis terjadi di laboratorium, melainkan langsung menga...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tombol Aksi View & Download LK (Tanpa DOCX - Khusus PDF) -->
+          <div class="pt-4 border-t border-slate-200 dark:border-slate-700/60 flex flex-wrap items-center justify-between gap-2">
+            <button type="button" onclick="openLkModal('sem1-ppl-terbimbing')" class="flex-1 min-w-[140px] px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow">
+              <span>👁️ View Isi Lengkap LK</span>
+            </button>
+            <a href="lk/LK Refleksi Semester 1 Praktik Pengalaman Lapangan Terbimbing _ A. Wahyu Redhani _ 2530111713968.pdf" download="LK Refleksi Semester 1 Praktik Pengalaman Lapangan Terbimbing _ A. Wahyu Redhani _ 2530111713968.pdf" onclick="handleDownloadLk(event, 'LK Refleksi Semester 1 Praktik Pengalaman Lapangan Terbimbing _ A. Wahyu Redhani _ 2530111713968.pdf', 'sem1-ppl-terbimbing')" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow" title="Download File PDF">
+              <span>⬇️ Download PDF</span>
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+  </main>
+
+  <!-- Modal Document Viewer LK -->
+  <div id="lk-viewer-modal" class="hidden fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="surface-card rounded-3xl max-w-5xl w-full max-h-[90vh] flex flex-col overflow-hidden shadow-2xl">
+      <div class="p-5 sm:p-6 border-b border-slate-200 dark:border-slate-700 flex items-start justify-between gap-4">
+        <div>
+          <h3 id="lk-modal-title" class="text-lg sm:text-xl font-extrabold">Pratinjau Lembar Kerja (LK)</h3>
+          <p id="lk-modal-filename" class="lk-filename-box text-blue-600 dark:text-blue-400 font-semibold mt-1"></p>
+        </div>
+        <button type="button" onclick="closeLkModal()" class="px-3.5 py-1.5 rounded-xl surface-subtle hover:bg-rose-500 hover:text-white font-bold text-xs transition">
+          ✕ Tutup
+        </button>
+      </div>
+      <div id="lk-modal-body" class="p-5 sm:p-6 overflow-y-auto flex-1 space-y-4"></div>
+      <div class="p-4 sm:p-5 border-t border-slate-200 dark:border-slate-700 flex flex-wrap items-center justify-between gap-3">
+        <div id="lk-modal-actions" class="flex flex-wrap gap-2"></div>
+        <button type="button" onclick="closeLkModal()" class="px-4 py-2 rounded-xl surface-subtle font-bold text-xs">Selesai Membaca</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Info Redirect Karya Inovasi (Khusus Pratinjau Canvas) -->
+  <div id="karya-inovasi-redirect-modal" class="hidden fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="surface-card rounded-3xl max-w-lg w-full p-6 sm:p-8 space-y-4 shadow-2xl border-t-4 border-t-amber-500">
+      <div class="flex items-center justify-between">
+        <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-bold uppercase">Tautan Antar-Website</span>
+        <button type="button" onclick="closeKaryaInovasiInfo()" class="text-sm font-bold opacity-70 hover:opacity-100">✕</button>
+      </div>
+      <h3 class="text-xl font-extrabold">Menuju Website Karya Inovasi: Informatika Learning Hub</h3>
+      <p class="text-sm opacity-85 leading-relaxed">
+        Pada paket deploy GitHub Pages (di dalam file ZIP), tombol ini langsung membuka halaman <code>../website-karya-inovasi/index.html</code> (atau URL GitHub Pages Website Karya Inovasi Anda).
+      </p>
+      <p class="text-sm opacity-85 leading-relaxed">
+        Di ruang kerja ini, Anda juga dapat langsung mencoba prototipe interaktif <strong>Website Karya Inovasi (Informatika Learning Hub)</strong> pada kartu file aplikasi kedua yang telah disediakan!
+      </p>
+      <div class="pt-2 flex justify-end">
+        <button type="button" onclick="closeKaryaInovasiInfo()" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs">Mengerti, Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="app-toast" class="hidden fixed bottom-5 right-5 z-50 px-5 py-3 rounded-2xl bg-slate-900 text-white text-xs sm:text-sm font-semibold shadow-2xl border border-slate-700 flex items-center gap-2.5">
+    <span>✅</span>
+    <span id="app-toast-text">Berhasil</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-6 mt-12 text-center text-xs opacity-75">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div><strong>Akhmad Wahyu Redhani</strong> • NIM 2530111713968 • PPG Calon Guru Informatika</div>
+      <div>Universitas Lambung Mangkurat (ULM) • PPL SMKN 1 Banjarmasin • 2026</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
